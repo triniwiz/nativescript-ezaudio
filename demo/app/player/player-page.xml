@@ -8,6 +8,7 @@
           </ActionBar.actionItems>
       </ActionBar>
   </Page.actionBar>
+  <ios>
   <AbsoluteLayout width="100%" height="100%">
     <ez:AudioPlot class="audioPlot" plotColor="{{audioPlotColor}}" plotType="{{audioPlotType}}" fill="{{audioPlotFill}}" mirror="{{audioPlotMirror}}" bufferData="{{audioPlotBufferData}}" />
     <Button text="{{btnTxt}}" tap="{{toggleCurrentTrack}}"/>
@@ -25,4 +26,8 @@
     <SegmentedBar items="{{plotFill}}" top="505" left="120" selectedIndexChanged="{{changePlotMirror}}" />
     <HtmlView html="{{footerNote}}" class="footer" top="565" left="0"/>
   </AbsoluteLayout>
+  </ios>
+  <android>
+  <ez:AudioPlot bufferData="{{bufferData}}" maxVolume="100" bgColor="#607D8B" sampleRate="{{sampleRate}}" numChannels="{{numChannels}}" bitPerSample="{{bitPerSample}}"/>
+  </android>
 </Page>
